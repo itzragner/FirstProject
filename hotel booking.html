@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style2.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <script src="js/script1.js"></script>
+        <script src="js/script.js"></script>
+        <link rel="shortcut icon" href="image/icon2.png" type="image/x-icon">
+        <title>Start Bootstrap</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    </head>
+    <script>
+        function check(){
+            if( document.getElementById("flight").checked){
+                document.getElementById("fn").disabled=false;
+                document.getElementById("fn").setAttribute('required','');
+                  
+            }
+            if(!document.getElementById("flight").checked){
+                document.getElementById("fn").disabled=true;
+                document.getElementById("fn").removeAttribute("required");
+                   
+
+            }
+        }
+        function fguest(){
+            if( document.getElementById("guest").checked){
+                document.getElementById("guest2").appendChild(document.createElement('input'))
+            }
+            if( !document.getElementById("guest").checked){
+                document.getElementById("guest2").removeChild(document.getElementById("guest2"));
+
+
+            }
+
+        }
+    </script>
+    <style>
+        .w3-container{padding:0.01em 16px}
+        .w3-light-grey,{color:#000!important;background-color:#f1f1f1!important}
+        .w3-round-xlarge{border-radius:16px}
+        .w3-blue,.w3-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
+    </style>
+<body id="top" >
+    <header class="font-body">
+        <div id="container" class="head">
+            <a href="index.html"><img src="image/logo2.png" ></a>
+        </div>
+        <div id="navbar">
+            <ul>
+                <li><a href="laptop.html">Laptops</a></li>
+                <li><a href="desktop.html">Desktops</a></li>
+                <li><a href="monitors.html">Monitors</a></li>
+                <li><a href="hotel booking.html">Reservation</a></li>
+            </ul>
+        </div>
+        <div id="kart">
+            <div><i class="fa fa-fw fa-search search" id="searchbtn" onclick="search()"></i></div>
+            <div id="search_container"><input type="search" id="search" placeholder="search..."></div>
+            <div><i class="fa fa-fw fa-cart-shopping"></i></div>
+            <div><a href="compte.html"><i class="fa fa-fw fa-solid fa-user"></i></a></div>     
+        </div>
+    </header>
+    <div id="main">
+        <div class="container" id="signup"> 
+            <form action="booking2.html" method="post">
+                <h1 >Hotel booking</h1>
+                <h4>answer few questions and be ready to have a nice stay with us</h2>
+                <div class="row">
+                    <div class="col">
+                        Full name
+                        <input id="nom" type="text"  required placeholder="Full name" style="background-color:white; border: 0;"/>
+                        Email
+                        <input id="nom" type="email" required  placeholder="Email"style="background-color:white ; border: 0;"/>
+                        Phone <br>
+                        <input id="phone" type="tel" required name="phone" style="background-color:#f2f2f2; border:0;"><br>
+                        <input type="checkbox" style="margin-top: 15px;" id="guest" onclick="fguest()">I have a guest<br>
+                        <!--<div id="guest2"></div>-->
+                        <input type="checkbox"   >I'd like to be picked in the aiport <br>
+                        <input type="checkbox" onclick="check()" name="" id="flight">Do you want to be picked up 
+                        <input type="text" disabled  placeholder="flight number" id="fn" > 
+                        <input type="submit" value="continue" style="border: 0;" >
+                        <div class="w3-container">
+                            <div class="w3-light-grey w3-round-xlarge">
+                              <div class="w3-container w3-blue w3-round-xlarge" style="width:20%; ">20%</div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <a href="#"><button id="buttom_top" title="Go to top"><img src="image/up.png"></button></a>
+    <footer>
+        <div class="section1">
+            <div>
+                <h2>Subscribe to Newsletters</h2>
+                <p>Be informed of our new products, tips and contests</p>
+            </div>
+            <div id="news">
+                <input type="email" placeholder="Votre Email">
+                <button type="submit">Go !</button>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="se">
+                <ul>
+                    <li><h3>Products</h3></li>
+                    <li><a href="laptop.html">laptops</a></li>
+                    <li><a href="desktop.html">desktops</a></li>
+                    <li><a href="monitors.html">monitors</a></li>
+                </ul>
+                <ul>
+                    <li><h3>Support</h3></li>
+                    <li>FAQ</li>
+                    <li>Terms of Sales</li>
+                    <li> Data Privacy</li>
+                    <li>Manage your data</li>
+                    <li>legal information</li>
+                    <li>contact us</li>
+                </ul>
+                <ul>
+                    <li><h3>Our enterprise</h3></li>
+                    <li>About us</li>
+                    <li>Store</li>
+                </ul>
+                <div>
+                    <h3>Follow us on social networks!</h3>
+                    <ul class="social">
+                        <li><a href=""><img src="image/instagram.svg"></a></li>
+                        <li><a href=""><img src="image/facebook.svg"></a></li>
+                        <li><a href=""><img src="image/tiktok.svg"></a></li>
+                        <li><a href=""><img src="image/twitter.svg"></a></li>
+                        <li><a href=""><img src="image/youtube.svg"></a></li>
+                    </ul>
+                    <h3>Partners</h3>
+                    <ul id="partner">
+                        <li><a href="http://www.omen.com/us/en.html"><img src="image/ome.png" alt=""></a></li>
+                        <li><a href="http://www.msi.com/index.php"><img src="image/MSI.png" alt=""></a></li>
+                        <li><a href="http://rog.asus.com/"><img src="image/rog.png" alt=""></a></li>
+                        <li><a href="http://www.coolermaster.com/"><img src="image/Cooler.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section3">
+            <div>Copyright © 2022  All rights reserved.</div>
+        </div>
+    </footer>  
+</body>
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+    utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+</script>
+</html>
